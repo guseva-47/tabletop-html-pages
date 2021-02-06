@@ -28,17 +28,23 @@
     </header>
     <section>
         <div class="container-xxl row">
+            <!-- Контейнер не основной но важной информации (узкий слева) -->
             <div class="lol order-lg-2 col-lg-3 order-1">
+                <!-- Кнопка запуска игры -->
                 <a class="btn btn-success btn-lg w-100" href="#" id="add-button">▷ Начать игру</a>
+                <!-- Блок с информацией об организаторе игры -->
                 <div class="person-block row">
+                    <!-- Аватар игрока -->
                     <div class="icon"></div>
+                    <!-- Описание игрока -->
                     <div class="col">
                         <p>Иванов Иван</p>
-                        <p>Информация о создателе игры</p>
                     </div>
                 </div>
+
+                <!-- Блок со списком остальных участников игры -->
                 <div class="person-block row" >
-                    <a class="btn btn w-100" href="#" id="add-button">+ Пригласить игрока</a>
+                    <a class="btn btn w-100" href="#" id="add-button" data-bs-toggle="modal" data-bs-target="#addPlayersModal">+ Пригласить игрока</a>
                     <hr>
                     <div class="col">
                         <img class="icon" src="http://placehold.it/100x100" alt="">
@@ -65,25 +71,117 @@
                         </div>
                     </div>
                     <hr style="margin-bottom: 0; margin-top: 5px;">
-                    <a class="btn btn w-100" href="#" id="add-button">- Удалить игрока</a>
+                    <a class="btn btn w-100" href="#" id="add-button" id="add-button" data-bs-toggle="modal" data-bs-target="#deletePlayersModal">- Удалить игрока</a>
                 </div>
+
+                <!-- Modal пиглашение (добавление) игроков -->
+                <div class="modal fade" id="addPlayersModal" tabindex="-1" aria-labelledby="addPlayersLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Пригласить игрока</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="name1">
+                                <label class="form-check-label" for="name1">
+                                  Аннова Анна
+                                </label>
+                              </div>
+                              <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="name2">
+                                <label class="form-check-label" for="name2">
+                                  Маринина Марина
+                                </label>
+                              </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                            <button type="button" class="btn btn-primary">Пригласить</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                <!-- Modal удаление игроков -->
+                <div class="modal fade" id="deletePlayersModal" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Удалить игрока</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="name33">
+                                <label class="form-check-label" for="name33">
+                                  Иванов Иван
+                                </label>
+                              </div>
+                              <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="name44">
+                                <label class="form-check-label" for="name44">
+                                  Ивнов Иван
+                                </label>
+                              </div>
+                              <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="name55">
+                                <label class="form-check-label" for="name55">
+                                  Ивнов Иван
+                                </label>
+                              </div>
+                              <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="name66">
+                                <label class="form-check-label" for="name66">
+                                  Ивнов Иван
+                                </label>
+                              </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                            <button type="button" class="btn btn-primary">Пригласить</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
             </div>
+            
+            <!-- Контейнер для основного блока на странице, при большом экране он располгается справа, при маленьком опускается ниже другого контейнера -->
             <div class="lol col-xxl-8 offset-xxl-1 
                             col-lg-9 offset-lg-0 order-lg-1 
                             order-2">
+                <!-- Изображение иллюстрация для статьи -->
                 <div class="">
                         <img class="img-fluid rounded mx-auto d-block" src="http://placehold.it/1400x300" alt="" style="max-height: 250px;">
                 </div>
                 <div class="">
+                    <!-- Редактируемый заголовок статьи -->
                     <h3>
                         <textarea class="text-center h3 w-100 form-control-plaintext" id="header" rows="1">Project</textarea>
                     </h3>
+                    <!-- Редактируемый текст статьи -->
                     <textarea class=" w-100 form-control-plaintext" id="header" rows="7">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.</textarea>
                     <p class=""></p>
                     <p></p>
                 </div>
+
+                <!-- Выбор игровой системы -->
+                <div class="row mb-3">
+                    <label for="colFormLabel" class="col-sm-3 col-form-label">Игровая система:</label>
+                    <div class="col-sm-9">
+                      <select class="form-select">
+                            <option selected value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <!-- Кнопки сохранения, отмены и удаления записи -->
                 <div class="d-grid gap-2 d-sm-flex justify-content-end">
                     <a class="btn btn-outline-danger" href="#">Удалить запись</a>
                     <a class="btn btn-outline-primary" href="#">Отмена</a>
